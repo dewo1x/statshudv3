@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "statshud",
+  "version": "${version}",
+  "name": "Stats HUD",
+  "description": "Small, customizable FPS, ping and TPS overlay. Made by Dewoix.",
+  "authors": ["Dewoix"],
+  "license": "MIT",
+  "icon": "assets/statshud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.statshud.StatsHudClient"],
+    "modmenu": ["com.example.statshud.StatsHudModMenu"]
+  },
+  "mixins": [
+    { "config": "statshud.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
